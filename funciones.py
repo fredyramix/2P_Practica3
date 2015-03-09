@@ -41,9 +41,17 @@ def PrimeraGeneracionAleatoria(all,num_cromo):
             pareja=[bandera,existencia]
             cromosoma.append(pareja)
         primera.append(cromosoma)
-    return primera
+    return primera,n
 
 
 def Imprimir(lista):
+    pass
+    print "============================================================================================================="
     for i in lista:
         print i
+    print "============================================================================================================="
+def ImprimirBest(best):
+    #pass
+    print "============================================================================================================="
+    print best
+    print "============================================================================================================="
