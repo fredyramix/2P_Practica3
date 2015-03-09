@@ -47,7 +47,7 @@ def main():
         primera=mut[:]
         c=c+1
         #raw_input("#####################################################################################################################")
-    print best
+    #print best
     print "Acabo en numero de generacion= " + str(c)
     print("El resultado final es: \n")
     print "N°  \tPeso   \tImportancia\tExistencia\t\tPeso X Existencia\t\t Importancia X Existencia"

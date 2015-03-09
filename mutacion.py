@@ -21,11 +21,14 @@ def Mutacion(cruz,num_cromo,n):
     if pos==0:
         if cruz[num][num_articulo][pos]==0:
             cruz[num][num_articulo][pos]=1
+            #if cruz[num][num_articulo][1]==0:
+            #    cruz[num][num_articulo][1]=1
         else:
             cruz[num][num_articulo][pos]=0
     if pos==1:
         cruz[num][num_articulo][pos]=random.randint(1,n)
-
+        #if cruz[num][num_articulo][0]==0:
+         #   cruz[num][num_articulo][0]=1
 
     #print cruz[num]
     #print "===="
