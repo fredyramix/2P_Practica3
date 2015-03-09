@@ -4,6 +4,7 @@ __author__ = 'fredy'
 
 def EvaluarFX(primera,tabla):
     #Cromosoma = [ (1,3), (0,0) , (8,9).....n , peso , importancia ]
+    p=[]
     for x in primera:
         peso=0
         importancia=0
@@ -17,4 +18,5 @@ def EvaluarFX(primera,tabla):
             c=c+1
         x.append(peso)
         x.append(importancia)
-    return primera
+        p.append(x)
+    return p

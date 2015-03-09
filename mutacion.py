@@ -4,25 +4,33 @@ import random
 
 
 def Mutacion(cruz,num_cromo,n):
-    cruzados=cruz[:]
-    num=random.randint(0,int(num_cromo)-1)
-    num_articulo=random.randint(0,len(cruzados[0])-1)
-    posicion=random.randint(0,1)
-    #print "num=" + str(num)
-    #print "numArt=" + str(num_articulo)
-    #print "pos=" + str(posicion)
-    cruzados[num][num_articulo][posicion]
-    if posicion==0:
-        #significa que la mutacion será si elegimos o no el articulo.
-        if cruzados[num][num_articulo][posicion]==1:
-            cruzados[num][num_articulo][posicion]=0
+    #print n
+    #print num_cromo
+    #for x in cruz:
+    #    print x
+    num=random.randrange(0,int(num_cromo)-1)
+    #print num
+    #print cruz[num]
+    num_articulo=random.randrange(0,len(cruz[num])-1)
+    #print num_articulo
+    #print cruz[num][num_articulo]
+    pos=random.randrange(0,2)
+    #print pos
+    #print cruz[num][num_articulo][pos]
+    #a=cruz[num][num_articulo][pos]
+    if pos==0:
+        if cruz[num][num_articulo][pos]==0:
+            cruz[num][num_articulo][pos]=1
         else:
-           cruzados[num][num_articulo][posicion]=1
-           if cruzados[num][num_articulo][1]==0:
-                cruzados[num][num_articulo][1]=1
-    else:
-        cruzados[num][num_articulo][posicion]=random.randint(1,int(n))
-        if cruzados[num][num_articulo][0]==0:
-            cruzados[num][num_articulo][0]=1
-    return cruzados
+            cruz[num][num_articulo][pos]=0
+    if pos==1:
+        cruz[num][num_articulo][pos]=random.randint(1,n)
+
+
+    #print cruz[num]
+    #print "===="
+    #for x in cruz:
+    #   print x
+    #raw_input("Esperad")
+    return cruz
 

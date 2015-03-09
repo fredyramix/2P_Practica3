@@ -2,15 +2,17 @@
 __author__ = 'fredy'
 
 
-def SeleccionMejor(seleccionados,best666):
+def SeleccionMejor(sel,best666,peso_max):
+    nuevo=[]
+    seleccionados=sel[:]
     seleccionados.sort(key=lambda x: x[-1])
-
     if len(best666)==0:
-        best=seleccionados[0][:]
-        return best[:]
+        b=seleccionados[0]
+        nuevo=b[:]
     else:
-        if seleccionados[0][-1] < best666[-1]:
-            best666=seleccionados[0][:]
-            return best666[:]
+        if seleccionados[0][-1] <= int(peso_max) and seleccionados[0][-2] > best666[-2]:
+            b=seleccionados[0]
+            nuevo=b[:]
         else:
-            return best666[:]
+            nuevo=best666[:]
+    return nuevo

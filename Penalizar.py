@@ -4,6 +4,7 @@ __author__ = 'fredy'
 
 def Penalizar(funcion_evaluada,tabla,peso_max):
     penalizacion=1000
+    p=[]
     for x in funcion_evaluada:
         count=1
         pena=0
@@ -23,4 +24,5 @@ def Penalizar(funcion_evaluada,tabla,peso_max):
                 pena=pena+0
             count=count+1
         x.append(pena+x[-2])
-    return funcion_evaluada
+        p.append(x)
+    return p
